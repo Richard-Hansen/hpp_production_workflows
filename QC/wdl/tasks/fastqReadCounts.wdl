@@ -36,12 +36,12 @@ task countFastqReads {
               READ_COUNT=$(( $READ_COUNT + $FILE_COUNT ))
         done
 
-        echo $READ_COUNT > total_reads.txt
+        echo $READ_COUNT
     >>>
 
     output {
 
-        File totalReadsFile  = "total_reads.txt"
+        File totalReadsFile = stdout()
     }
 
     runtime {
