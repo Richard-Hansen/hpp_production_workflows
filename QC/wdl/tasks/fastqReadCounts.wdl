@@ -23,11 +23,6 @@ task countFastqReads {
 
     command <<<
 
-        set -o pipefail
-        set -e
-        set -u
-        set -o xtrace
-
         READ_COUNT=0
 
         for fq in ~{sep=' ' inputFastq}
